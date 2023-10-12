@@ -267,7 +267,7 @@ async def overall_stats(client, CallbackQuery, _):
     await CallbackQuery.edit_message_text(_["gstats_8"])
     served_chats = len(await get_served_chats())
     served_users = len(await get_served_users())
-    total_queries = await get_queries()
+    total_queries = len(await get_queries())
     blocked = len(BANNED_USERS)
     sudoers = len(SUDOERS)
     mod = len(ALL_MODULES)
